@@ -1,16 +1,41 @@
-<div align="center">
-  <img src="icon.png" width="120" alt="Phoeramus icon">
+<p align="center">
+  <img src="icon.png" width="128" alt="Phoeramus icon">
+</p>
 
-# Phoeramus
+<h1 align="center">Phoeramus</h1>
 
-**A lightweight Windows media downloader with a native Qt/QML interface.**
+<p align="center">
+  <strong>A lightweight Windows media downloader with a native Qt/QML interface.</strong>
+</p>
 
-Python · PySide6/QML · yt-dlp · FFmpeg
-</div>
+<p align="center">
+  Python · PySide6/QML · yt-dlp · FFmpeg
+</p>
 
-## About
+<p align="center">
+  <a href="https://github.com/photenix212/Phoeramus/releases/latest"><strong>Download for Windows</strong></a>
+  ·
+  <a href="https://github.com/photenix212/Phoeramus/releases/latest">Latest Release</a>
+</p>
 
-Phoeramus is a desktop media downloader built as a small personal project around `yt-dlp` and FFmpeg. It focuses on a clean interface, sensible audio defaults, useful metadata, and a portable Windows build.
+<p align="center">
+  Windows 10/11 x64 · Portable · No Python installation required
+</p>
+
+---
+
+## Download
+
+The easiest way to use Phoeramus is the portable Windows build.
+
+1. Open the [latest release](https://github.com/photenix212/Phoeramus/releases/latest).
+2. Download `Phoeramus-v1.0.0-Windows-x64.zip` from **Assets**.
+3. Extract the ZIP.
+4. Run `Phoeramus.exe`.
+
+No Python or FFmpeg installation is required.
+
+> Windows SmartScreen may show an "unrecognized app" warning because Phoeramus is currently not code-signed.
 
 ## Features
 
@@ -25,31 +50,56 @@ Phoeramus is a desktop media downloader built as a small personal project around
 - English and Russian interface
 - Automatic browser-cookie fallback for YouTube bot/authentication checks
 - Bundled FFmpeg/ffprobe in portable builds
-- Portable Windows build — no Python installation required for end users
+- Portable Windows build
 
 ## Run from source
 
-Requirements: Windows and Python 3.13.
+Requirements:
+
+- Windows 10/11
+- Python 3.13
+
+Create a virtual environment:
 
 ```powershell
 py -3.13 -m venv .venv
+```
+
+Activate it:
+
+```powershell
 .\.venv\Scripts\Activate.ps1
+```
+
+Install dependencies:
+
+```powershell
 python -m pip install -r requirements.txt
+```
+
+Download FFmpeg and ffprobe:
+
+```powershell
 .\setup_ffmpeg.ps1
+```
+
+Run Phoeramus:
+
+```powershell
 python main.py
 ```
 
-`setup_ffmpeg.ps1` downloads the FFmpeg essentials build and keeps only `ffmpeg.exe` and `ffprobe.exe` in the local `bin` directory. These large binaries are intentionally not stored in the Git repository.
+`setup_ffmpeg.ps1` downloads the FFmpeg essentials build and keeps only `ffmpeg.exe` and `ffprobe.exe` in the local `bin` directory.
 
 ## Build a portable version
 
-After creating `.venv`, run:
+After preparing the environment, run:
 
 ```powershell
 .\build_portable.ps1
 ```
 
-The resulting application is written to `dist/Phoeramus/`, and a portable ZIP is created in `dist/`.
+The application is created in `dist/Phoeramus/`, along with a portable ZIP in `dist/`.
 
 ## Project structure
 
@@ -68,7 +118,9 @@ Phoeramus/
 
 ## Roadmap / ideas
 
-Phoeramus v1 focuses on YouTube/media URLs supported by yt-dlp. Possible future experiments include Spotify, Deezer and Apple Music link recognition, source matching, and searching for the best available quality across multiple sources.
+Phoeramus v1 focuses on YouTube and other media URLs supported by yt-dlp.
+
+Possible future experiments include Spotify, Deezer and Apple Music link recognition, source matching, and searching for the best available quality across multiple sources.
 
 ## Notes
 
