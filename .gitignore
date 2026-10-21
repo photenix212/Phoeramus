@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.venv-*/
+venv/
+
+# Build output
+build/
+dist/
+*.spec
+
+# Runtime/user data
+data/*.json
+downloads/
+
+# Bundled FFmpeg binaries (downloaded locally by setup_ffmpeg.ps1)
+bin/*.exe
+bin/*.dll
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs / temp
+*.log
+*.tmp
+*.part
+*.ytdl
